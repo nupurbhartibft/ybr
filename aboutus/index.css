@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Pinyon+Script&display=swap');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.nav {
+  height: 64px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav .left,
+.nav .right {
+  height: 64px;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(17, 17, 17);
+  color: white;
+  border-bottom-left-radius: 16px;
+}
+
+.nav .left {
+  width: 7%;
+  min-width: 64px;
+  border-bottom-right-radius: 16px;
+  border-bottom-left-radius: 0;
+}
+
+.nav .left .logo {
+  border-bottom-right-radius: 16px;
+  font-family: "Pinyon Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 24px;
+}
+
+.nav .right .item {
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+
+.nav .right .item::after {
+  content: "";
+  background-color: white;
+  height: 2px;
+  width: 0%;
+  transition: 0.2s;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.nav .right .item:hover::after {
+  width: 100%;
+}
+
+
+.aboutus{
+    width: 100%;
+    height: calc(100% - 64px);
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 32px;
+}
+
+.aboutus .left{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.aboutus .left .head{
+    font-size: 32px;
+    font-weight: 1000;
+    color: #800000;
+    position: relative;
+}
+
+.aboutus .left .head::after {
+    content: "";
+    background-color: #80000080;
+    height: 16px;
+    width: 69%;
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+}
+
+.aboutus .left .content{
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+    text-align: justify;
+}
+
+.aboutus .sep{
+    width: 2px;
+    height: 100%;
+    background-color: #800000;
+}
+
+.aboutus .right{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 32px;
+    padding-right: 16px;
+}
+
+.aboutus .right .headright{
+    font-size: 32px;
+    font-weight: 1000;
+    color: #800000;
+    position: relative;
+}
+
+.aboutus .right .headright::after {
+    content: "";
+    background-color: #80000080;
+    height: 16px;
+    width: 38%;
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+}
+
+.aboutus .right .contentright{
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.Contacts .Contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap:8px;
+ }
+
+.Contacts .Contact {
+   justify-content: flex-start;
+   
+}
+
+#faqs {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 100%;
+}
+
+#faqs .faq {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 16px;
+    border-radius: 16px;
+}
+
+#faqs .faq .question {
+    font-size: 20px;
+    font-weight: 1000;
+    color: #800000;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+}
+
+#faqs .faq .question::after {
+    content: "";
+    background-color: #800000;
+    height: 2px;
+    width: 0%;
+    transition: 250ms;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#faqs .faq .question:hover::after {
+    width: 20px;
+}
+
+#faqs .faq .answer {
+    font-size: 16px;
+    font-weight: 400;
+    height: auto;
+    transition: 250ms;
+    color: #000000;
+    padding-left: 32px;
+}
+
+#faqs .faq .answer.hide {
+    /* height: fit-content; */
+    font-size: 0;
+}

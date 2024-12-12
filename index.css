@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Pinyon+Script&display=swap');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.nav {
+  position: relative;
+  height: 64px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.nav .left,
+.nav .right {
+  height: 64px;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(17, 17, 17);
+  color: white;
+  border-bottom-left-radius: 16px;
+}
+
+.nav .left {
+  width: 7%;
+  min-width: 64px;
+  border-bottom-right-radius: 16px;
+  border-bottom-left-radius: 0;
+}
+
+.nav .left .logo {
+  border-bottom-right-radius: 16px;
+  font-family: "Pinyon Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 24px;
+}
+
+.nav .right .item {
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+
+.nav .right .item::after {
+  content: "";
+  background-color: white;
+  height: 2px;
+  width: 0%;
+  transition: 0.2s;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.nav .right .item:hover::after {
+  width: 100%;
+}
+
+.slide {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 128px;
+  height: 100%;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  text-align: center;
+  width: 80%;
+  border-radius: 16px;
+  padding: 32px;
+}
+.content img {
+  max-width: 50%;
+  height: auto;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+}
+.text h1 {
+  color: #7b1f1f;
+  font-size: 4em;
+  margin: 0;
+}
+.text p {
+  font-size: 2em;
+  margin: 0;
+  font-weight: bold;
+}
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2em;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  border-radius: 50%;
+}
+.left {
+  left: 10px;
+}
+.right {
+  right: 10px;
+}
+.content {
+  position: relative;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.5);
+}
+#subText {
+  font-size: 2em;
+  margin: 0;
+  font-weight: bold;
+}
+
+.behind {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  height: calc(100vh - 64px);
+}
+
+.behind .bgLogo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 10em;
+  color: #80000080;
+  transform: rotateZ(-45deg);
+  font-family: "Pinyon Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  pointer-events:none;
+  user-select:none;
+}
+
+.bg {
+    font-family: "Ballet", cursive;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    pointer-events:none;
+    user-select:none;
+}
